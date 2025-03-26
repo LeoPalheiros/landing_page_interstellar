@@ -1,0 +1,87 @@
+@use 'variaveis';
+
+.keys {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 60px 20px;
+    position: relative;
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 85%; 
+        height: 2px;
+        background-color: variaveis.$corDeTextoPrincipal;
+    }
+
+    &__grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        gap: 20px;
+        width: 100%;
+        max-width: 1200px;
+        margin-top: 20px; 
+    }
+
+    &__item {
+        position: relative;
+        height: 300px; 
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        color: variaveis.$corDeTextoPrincipal;
+        padding: 20px;
+        border-radius: 10px;
+        overflow: hidden;
+        cursor: pointer; 
+        transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+
+        h3 {
+            font-size: 2vw;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        p {
+            font-size: 1.2vw;
+            max-width: 80%;
+        }
+
+        &--one { background: url('../images/Interestelar.jpg') center/cover no-repeat; }
+        &--two { background: url('../images/Interestelar2.jpg') center/cover no-repeat; }
+        &--three { background: url('../images/Interestelar3.jpg') center/cover no-repeat; }
+        &--four { background: url('../images/Interestelar4.jpg') center/cover no-repeat; }
+
+        // Efeito escuro sobre a imagem 
+        &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 0;
+        }
+
+        h3, p {
+            position: relative;
+            z-index: 1;
+        }
+
+        // Efeito ao passar o mouse
+        &:hover {
+            transform: scale(1.05); 
+            box-shadow: 0 10px 20px rgba(255, 255, 255, 0.2);
+        }
+    }
+}

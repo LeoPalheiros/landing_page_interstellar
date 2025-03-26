@@ -1,0 +1,27 @@
+@use 'variaveis';
+
+.journey {
+    width: 100%;
+    color: variaveis.$corDeTextoPrincipal;
+    padding: 60px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    &__content {
+        max-width: 800px;
+    }
+
+    &__title {
+        font-size: 3vw;
+        font-weight: bold;
+        margin-bottom: 20px;
+    }
+
+    &__text {
+        font-size: 1.5vw;
+        line-height: 1.6;
+        margin-bottom: 20px;
+    }
+}

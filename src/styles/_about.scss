@@ -1,0 +1,63 @@
+@use 'variaveis';
+
+.about {
+    width: 100%;
+    color: variaveis.$corDeTextoPrincipal;
+    padding: 60px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &__separator {
+        width: 90%;
+        height: 3px;
+        background-color: variaveis.$corDeTextoPrincipal;
+        margin-bottom: 40px;
+    }
+
+    &__container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        max-width: 1200px;
+        width: 100%;
+    }
+
+    &__content {
+        width: 50%;
+        padding-right: 40px;
+    }
+
+    &__title {
+        font-size: 3vw;
+        font-weight: bold;
+        margin-bottom: 20px;
+    }
+
+    &__list {
+        list-style: none;
+        padding: 0;
+
+        li {
+            font-size: 1.5vw;
+            line-height: 1.8;
+            margin-bottom: 10px;
+
+            strong {
+                color: #ccc;
+            }
+        }
+    }
+
+    &__image {
+        width: 50%;
+        display: flex;
+        justify-content: center;
+
+        img {
+            width: 80%; 
+            height: auto;
+            border-radius: 10px;
+        }
+    }
+}

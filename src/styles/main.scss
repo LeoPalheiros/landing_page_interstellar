@@ -1,0 +1,15 @@
+@use 'variaveis';
+@use 'header';
+@use 'hero';
+@use 'journey';
+@use 'about';
+@use 'keys';
+@use 'images';
+@use 'topic';
+@use 'footer';
+
+body {
+    background-color: #000;
+    font-family: "Alumni Sans Pinstripe", sans-serif;
+}
+

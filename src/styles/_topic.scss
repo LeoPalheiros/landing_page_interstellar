@@ -1,0 +1,65 @@
+@use 'variaveis';
+
+.topic {
+    width: 100%;
+    background-color: variaveis.$corDeFundo;
+    color: variaveis.$corDeTextoPrincipal;
+    padding: 60px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &__container {
+        display: flex;
+        width: 100%;
+        max-width: 1200px;
+        gap: 40px;
+        position: relative;
+    }
+
+    &__cast,
+    &__director {
+        flex: 1;
+        padding: 20px;
+    }
+
+    &__cast {
+        text-align: left;
+    }
+
+    &__director {
+        text-align: right;
+    }
+
+    ul {
+        list-style: none;
+        padding: 0;
+
+        li {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+        }
+    }
+
+    p {
+        font-size: 1.2rem;
+        line-height: 1.5;
+    }
+
+    h2 {
+        font-size: 2rem;
+        font-weight: bold;
+        margin-bottom: 20px;
+    }
+
+    &__container::before {
+        content: "";
+        position: absolute;
+        width: 2px;
+        height: 100%;
+        background-color: variaveis.$corDeTextoPrincipal;
+        left: 50%;
+        top: 0;
+        transform: translateX(-50%);
+    }
+}

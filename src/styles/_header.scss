@@ -1,0 +1,56 @@
+@use 'variaveis';
+
+.header {
+    width: 100%;
+    background-color: variaveis.$corDeFundo;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    padding: 15px 0;
+    box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.1);
+
+    &__nav {
+        display: flex;
+        justify-content: center;
+    }
+
+    &__menu {
+        list-style: none;
+        display: flex;
+        gap: 20px;
+        padding: 0;
+        margin: 0;
+
+        li {
+            display: inline-block;
+        }
+
+        a {
+            text-decoration: none;
+            color: variaveis.$corDeTextoPrincipal;
+            font-size: 1.2rem;
+            padding: 10px 15px;
+            transition: all 0.3s ease-in-out;
+
+            &:hover {
+                background-color: variaveis.$corDeTextoPrincipal;
+                color: variaveis.$corDeFundo;
+                border-radius: 5px;
+            }
+        }
+
+        li:last-child a {
+            font-weight: bold;
+            border: 2px solid variaveis.$corDeTextoPrincipal;
+            border-radius: 5px;
+            padding: 8px 15px;
+            transition: all 0.3s ease-in-out;
+
+            &:hover {
+                background-color: yellow;
+                color: variaveis.$corDeFundo;
+            }
+        }
+    }
+}

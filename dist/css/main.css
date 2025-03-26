@@ -1,0 +1,321 @@
+.header {
+  width: 100%;
+  background-color: #000;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  padding: 15px 0;
+  box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.1);
+}
+.header__nav {
+  display: flex;
+  justify-content: center;
+}
+.header__menu {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  padding: 0;
+  margin: 0;
+}
+.header__menu li {
+  display: inline-block;
+}
+.header__menu a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 1.2rem;
+  padding: 10px 15px;
+  transition: all 0.3s ease-in-out;
+}
+.header__menu a:hover {
+  background-color: #fff;
+  color: #000;
+  border-radius: 5px;
+}
+
+.hero {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #fff;
+  position: relative;
+}
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url("../images/fundo.jpg") no-repeat center center;
+  background-size: cover;
+  z-index: -1;
+}
+.hero__content {
+  position: relative;
+  z-index: 2;
+  padding: 20px;
+}
+.hero__title {
+  font-size: 12vw;
+  font-weight: bold;
+  text-shadow: 4px 4px 10px rgba(0, 0, 0, 0.7);
+}
+.hero__quote {
+  font-size: 3vw;
+  font-style: italic;
+  margin-top: 20px;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+}
+
+.journey {
+  width: 100%;
+  color: #fff;
+  padding: 60px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.journey__content {
+  max-width: 800px;
+}
+.journey__title {
+  font-size: 3vw;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+.journey__text {
+  font-size: 1.5vw;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.about {
+  width: 100%;
+  color: #fff;
+  padding: 60px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.about__separator {
+  width: 90%;
+  height: 3px;
+  background-color: #fff;
+  margin-bottom: 40px;
+}
+.about__container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  width: 100%;
+}
+.about__content {
+  width: 50%;
+  padding-right: 40px;
+}
+.about__title {
+  font-size: 3vw;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+.about__list {
+  list-style: none;
+  padding: 0;
+}
+.about__list li {
+  font-size: 1.5vw;
+  line-height: 1.8;
+  margin-bottom: 10px;
+}
+.about__list li strong {
+  color: #ccc;
+}
+.about__image {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+}
+.about__image img {
+  width: 80%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.keys {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 60px 20px;
+  position: relative;
+}
+.keys::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 85%;
+  height: 2px;
+  background-color: #fff;
+}
+.keys__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 20px;
+  width: 100%;
+  max-width: 1200px;
+  margin-top: 20px;
+}
+.keys__item {
+  position: relative;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+.keys__item h3 {
+  font-size: 2vw;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.keys__item p {
+  font-size: 1.2vw;
+  max-width: 80%;
+}
+.keys__item--one {
+  background: url("../images/Interestelar.jpg") center/cover no-repeat;
+}
+.keys__item--two {
+  background: url("../images/Interestelar2.jpg") center/cover no-repeat;
+}
+.keys__item--three {
+  background: url("../images/Interestelar3.jpg") center/cover no-repeat;
+}
+.keys__item--four {
+  background: url("../images/Interestelar4.jpg") center/cover no-repeat;
+}
+.keys__item::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 0;
+}
+.keys__item h3, .keys__item p {
+  position: relative;
+  z-index: 1;
+}
+.keys__item:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(255, 255, 255, 0.2);
+}
+
+.full-screen-image {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+.full-screen-image__background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url("../images/secao.jpg") center/cover no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.topic {
+  width: 100%;
+  background-color: #000;
+  color: #fff;
+  padding: 60px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.topic__container {
+  display: flex;
+  width: 100%;
+  max-width: 1200px;
+  gap: 40px;
+  position: relative;
+}
+.topic__cast, .topic__director {
+  flex: 1;
+  padding: 20px;
+}
+.topic__cast {
+  text-align: left;
+}
+.topic__director {
+  text-align: right;
+}
+.topic ul {
+  list-style: none;
+  padding: 0;
+}
+.topic ul li {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+.topic p {
+  font-size: 1.2rem;
+  line-height: 1.5;
+}
+.topic h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+.topic__container::before {
+  content: "";
+  position: absolute;
+  width: 2px;
+  height: 100%;
+  background-color: #fff;
+  left: 50%;
+  top: 0;
+  transform: translateX(-50%);
+}
+
+.footer {
+  width: 100%;
+  background-color: #000;
+  color: #fff;
+  text-align: center;
+  padding: 30px 20px;
+  font-size: 1.2rem;
+}
+.footer p {
+  margin: 5px 0;
+}
+
+body {
+  background-color: #000;
+  font-family: "Alumni Sans Pinstripe", sans-serif;
+}

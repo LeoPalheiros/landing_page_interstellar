@@ -1,0 +1,1 @@
+document.addEventListener("DOMContentLoaded",function(){document.querySelectorAll('.header__menu a[href^="#"]').forEach(e=>{e.addEventListener("click",function(e){e.preventDefault();e=this.getAttribute("href").substring(1),e=document.getElementById(e);e&&window.scrollTo({top:e.offsetTop-60,behavior:"smooth"})})})});
