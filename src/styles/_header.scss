@@ -53,4 +53,14 @@
             }
         }
     }
+
+    @media (max-width: 768px) {
+        &__menu {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+            text-align: center;
+            padding: 10px;
+        }
+    }
 }

@@ -24,4 +24,15 @@
         line-height: 1.6;
         margin-bottom: 20px;
     }
+
+    @media (max-width: 768px) {
+        &__title {
+            font-size: 6vw;
+        }
+
+        &__text {
+            font-size: 4vw;
+            line-height: 1.8;
+        }
+    }
 }

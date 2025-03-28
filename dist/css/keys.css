@@ -80,3 +80,21 @@
   transform: scale(1.05);
   box-shadow: 0 10px 20px rgba(255, 255, 255, 0.2);
 }
+@media (max-width: 768px) {
+  .keys__grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+  }
+  .keys__item {
+    height: auto;
+  }
+  .keys h3 {
+    font-size: 5vw;
+  }
+  .keys p {
+    font-size: 4vw;
+  }
+  .keys--one, .keys--two, .keys--three, .keys--four {
+    background-size: cover;
+  }
+}

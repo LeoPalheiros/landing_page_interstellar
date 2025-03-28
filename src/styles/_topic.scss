@@ -8,6 +8,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column; 
 
     &__container {
         display: flex;
@@ -15,15 +16,14 @@
         max-width: 1200px;
         gap: 40px;
         position: relative;
+        flex-direction: row;
+        flex-wrap: wrap; 
     }
 
     &__cast,
     &__director {
         flex: 1;
         padding: 20px;
-    }
-
-    &__cast {
         text-align: left;
     }
 
@@ -36,18 +36,18 @@
         padding: 0;
 
         li {
-            font-size: 1.2rem;
+            font-size: 1.4rem; 
             margin-bottom: 10px;
         }
     }
 
     p {
-        font-size: 1.2rem;
+        font-size: 1.4rem; 
         line-height: 1.5;
     }
 
     h2 {
-        font-size: 2rem;
+        font-size: 2.5rem; 
         font-weight: bold;
         margin-bottom: 20px;
     }
@@ -61,5 +61,24 @@
         left: 50%;
         top: 0;
         transform: translateX(-50%);
+    }
+
+    @media (max-width: 768px) {
+        &__container {
+            flex-direction: column; 
+        }
+
+        h2 {
+            font-size: 2rem; 
+        }
+
+        ul li,
+        p {
+            font-size: 1.3rem; 
+        }
+
+        &__container::before {
+            display: none;
+        }
     }
 }
